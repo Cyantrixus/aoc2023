@@ -88,10 +88,11 @@ def solve2(l)
         taken = []
         v.each{|digit|
             digit = {'ch' => digit['ch'], 'x' => digit['x'], 'y' => digit['y']}
-            # check left
+
             if not taken.include?(digit)
                 i = 0
                 concatenated = ''
+                # check left
                 while l[digit['y']][digit['x'] + i].match(/\d/) and not taken.include?(l[digit['y']][digit['x'] + i])
                     newdigit = l[digit['y']][digit['x'] + i]
 
